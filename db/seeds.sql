@@ -1,10 +1,10 @@
-INSERT INTO department (id, department_name)
-VALUES (001, "Engineering and Technology"),
-        (002, "Sales, Service, and Support"),
-        (003, "Marketing and Communications"),
-        (004, "Design"),
-        (005, "Business Strategy"),
-        (006, "Finance");
+INSERT INTO department (department_name)
+VALUES ("Engineering and Technology"),
+        ("Sales, Service, and Support"),
+        ("Marketing and Communications"),
+        ("Design"),
+        ("Business Strategy"),
+        ("Finance");
        
 INSERT INTO roles (id, title, salary, department_id)
 VALUES (001, "Engineering and Technology Manager", 105000, 001),

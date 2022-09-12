@@ -15,17 +15,23 @@ app.use(express.json());
 
 //connect to db with mysql connection
 const db = mysql.createConnection({
-        host: 'localhost',
-        // MySQL username,
-        user: 'root',
-        // MySQL password
-        password: '',
-        database: 'employee_db'
-    },
-    console.log(`Connected to the employee database.`)
-);
+    host: 'localhost',
+    // MySQL username,
+    user: 'root',
+    // MySQL password
+    password: '',
+    database: 'employee_db'
+});
 
-init();
+db.connect((err) => {
+    if (err) {
+        console.log(err);
+        return
+    }
+    console.log("Database connected")
+    init();
+})
+
 
 function init() {
     inquirer
@@ -75,31 +81,60 @@ function init() {
         });
 }
 
-function viewDepartments() {
+
+
+
+
+
+
+function viewDepartments(err) {
     console.log("Viewing Departments");
 
+    if (err) throw err;
+    db.query("SELECT * FROM department", function(err, result) {
+        if (err) throw err;
+        console.table(result);
+        init();
+    });
+
 }
 
-function viewRoles() {
+function viewRoles(err) {
     console.log("Viewing Roles");
+    if (err) throw err;
+    db.query("SELECT * FROM roles", function(err, result) {
+        if (err) throw err;
+        console.table(result);
+        init();
+    });
 }
 
-function viewEmployees() {
+function viewEmployees(err) {
     console.log("Viewing Employees");
+    if (err) throw err;
+    db.query("SELECT * FROM employee", function(err, result) {
+        if (err) throw err;
+        console.table(result);
+        init();
+    });
 }
 
 function addDepartment() {
     console.log("Adding a Department");
+    init();
 }
 
 function addRole() {
     console.log("Adding a Role");
+    init();
 }
 
 function addEmployee() {
     console.log("Adding an Employee");
+    init();
 }
 
 function updateEmployeeRole() {
     console.log("Updating an Employee Role");
+    init();
 }
