@@ -89,14 +89,12 @@ function init() {
 
 function viewDepartments(err) {
     console.log("Viewing Departments");
-
     if (err) throw err;
     db.query("SELECT * FROM department", function(err, result) {
         if (err) throw err;
         console.table(result);
         init();
     });
-
 }
 
 function viewRoles(err) {
@@ -121,8 +119,26 @@ function viewEmployees(err) {
 
 function addDepartment() {
     console.log("Adding a Department");
-    init();
-}
+    inquirer.prompt({
+        type: "Input",
+        message: "What is the name of the daprtment you would like to add?",
+        name: "departmentname"
+    })
+
+    .then((response) => {
+        db.query("INSERT INTO department (department_name) VALUES (?)", response.departmentname, (err, res) => {
+            if (err) throw err;
+            console.log(response.newDepartment + ` successfully created!`)
+            viewDepartments();
+            init();
+        })
+    })
+
+};
+
+
+
+
 
 function addRole() {
     console.log("Adding a Role");

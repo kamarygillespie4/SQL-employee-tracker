@@ -27,23 +27,23 @@ VALUES (001, "Engineering and Technology Manager", 105000, 001),
         (018, "Competition Economist", 100000, 006)
 ;
 
-INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
-VALUES (001, "John", "Smith", 001, null),
-        (002, "Cade", "Archer", 002, 001),
-        (003, "Bonita", "Gutierrez", 003, 001),
-        (004, "Blythe", "Stellars", 004, null),
-        (005, "Colby", "McBride", 005, 004),
-        (006, "Laibah", "Bull", 006, 004),
-        (007, "Kate", "Burgess", 007, null),
-        (008, "Mariya", "Watkins", 008, 007),
-        (009, "Maggie", "Mcgee", 009, 007),
-        (010, "Miranda", "Campbell", 010, null),
-        (011, "Kathy", "Salgado", 011, 010),
-        (012, "Drake", "Diaz", 012, 010),
-        (013, "August", "Grimes", 013, null),
-        (014, "Jed", "Armstrong", 014, 013),
-        (015, "Rahim", "Taylor", 015, 013),
-        (016, "Karter", "Wilkes", 016, null),
-        (017, "Kristi", "Davi", 017, 016),
-        (018, "Henna", "Barnard", 018, 016)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("John", "Smith", 001, null),
+        ("Cade", "Archer", 002, 001),
+        ("Bonita", "Gutierrez", 003, 001),
+        ("Blythe", "Stellars", 004, null),
+        ("Colby", "McBride", 005, 004),
+        ("Laibah", "Bull", 006, 004),
+        ("Kate", "Burgess", 007, null),
+        ("Mariya", "Watkins", 008, 007),
+        ("Maggie", "Mcgee", 009, 007),
+        ("Miranda", "Campbell", 010, null),
+        ("Kathy", "Salgado", 011, 010),
+        ("Drake", "Diaz", 012, 010),
+        ("August", "Grimes", 013, null),
+        ("Jed", "Armstrong", 014, 013),
+        ("Rahim", "Taylor", 015, 013),
+        ("Karter", "Wilkes", 016, null),
+        ("Kristi", "Davi", 017, 016),
+        ("Henna", "Barnard", 018, 016)
 ;
