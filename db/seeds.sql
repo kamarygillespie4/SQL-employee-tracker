@@ -6,26 +6,28 @@ VALUES ("Engineering and Technology"),
         ("Business Strategy"),
         ("Finance");
        
-INSERT INTO roles (id, title, salary, department_id)
-VALUES (001, "Engineering and Technology Manager", 105000, 001),
-        (002, "Software Engineer", 85000, 001),
-        (003, "Google Cloud Engineer", 85000, 001),
-        (004, "Sales, Service, and Support Manager", 100000, 002),
-        (005, "Strategy and Operations", 80000, 002),
-        (006, "Creative Business Partner", 65000, 002),
-        (007, "Marketing and Communications Manager", 120000, 003),
-        (008, "Consumer Analytics Analyst", 80000, 003),
-        (009, "Product Marketing", 65000, 003),
-        (010, "Design Manager", 120000, 004),
-        (011, "Motion Designer", 100000, 004),
-        (012, "Interaction Designer", 100000, 004),
-        (013, "Business Strategy Manager", 150000, 005),
-        (014, "Senior Sales Representative", 100000, 005),
-        (015, "Junior Sales Representative", 75000, 005),
-        (016, "Finances Manager", 150000, 006),
-        (017, "Revanue and Margin Analyst", 100000, 006),
-        (018, "Competition Economist", 100000, 006)
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Engineering and Technology Manager", 105000, 001),
+        ("Software Engineer", 85000, 001),
+        ("Google Cloud Engineer", 85000, 001),
+        ("Sales, Service, and Support Manager", 100000, 002),
+        ("Strategy and Operations", 80000, 002),
+        ("Creative Business Partner", 65000, 002),
+        ("Marketing and Communications Manager", 120000, 003),
+        ("Consumer Analytics Analyst", 80000, 003),
+        ("Product Marketing", 65000, 003),
+        ("Design Manager", 120000, 004),
+        ("Motion Designer", 100000, 004),
+        ("Interaction Designer", 100000, 004),
+        ("Business Strategy Manager", 150000, 005),
+        ("Senior Sales Representative", 100000, 005),
+        ("Junior Sales Representative", 75000, 005),
+        ("Finances Manager", 150000, 006),
+        ("Revanue and Margin Analyst", 100000, 006),
+        ("Competition Economist", 100000, 006)
 ;
+
+
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("John", "Smith", 001, null),
